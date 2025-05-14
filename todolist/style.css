@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #152677, #4e085f);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 28px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 35px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    cursor: pointer;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAdVBMVEX///8AAAD8/PweHh4KCgr29vYPDw/n5+f5+fktLS3k5OQ+Pj5sbGwICAg5OTm2trZSUlKoqKjT09O/v78aGhra2tqTk5PGxsawsLBFRUUkJCSpqakwMDCBgYFwcHAYGBidnZ1aWlp3d3ePj4+YmJhfX19JSUlGeu+cAAAF6klEQVR4nO2dCZqqMAyARzbZFBXFBRdcZu5/xIe+GZticSNpkS//AdKWtkmapuHri2EYhmEYhmEYhmEYhmEYhmEYhmGYNmPNFsftKAp23qDXG3i7IBpts8XMMt2vlwjH8dDpKXGG8Tg03b+ncBexrR6DwI4Xrul+3scdjwaPRvE7M6O8vWOZxN5zo/iPF09M91iFNR6+Mor/DPO2bX4/e7gx1KxOvum+A6zizWGcsYvWzEoSvD+MM0FqegQXwlGzYZwZmTctVlZj+co187M9JfNJ2Pf9fjiZJ9n2p3YFeifD4wgjZb+c5WauNBPufLNUW5rI6KSMVYbDPqR3NZGfHlQz4+W6en3bo1gxF9/pE0rISr8VK3JrSH2FtxZwVTztd7jF6nZ59Sn7W8dkWu3H+jU7bY1v1LZtwGlJqttjvXhdyKI6FE+7SckrusfL3lrg1rHyPQZvfI4mFJUvuX97dYf7iqgxZj8fURmH3WhBJFNjI8nlln8aKpv+UpanbXUl8v44Npe4kfeJph0/kfbnbo4hM91BmZ4WLRxK/sVqhiN1Jkm1NVhGX7Lna7QW+5JJiei9Fcm/ihAjIa7kSG/xBKsZU42jOhJiXziEG32NHJly4erySM8nFvxoK/Qd2Yc7foktHZKBhnZI+goyg1qY8PQrLSwU+1El1bO4YLwEwZ6rgDZ+RNNE6ZqARn6I2rCg30XkqlhAqdCZ3j7whdc0ZrGg/1Zn4LwXFA34QDfuKRr4A+zEFcWUANXrkfp0IYgUEahgC0xIhi8eciSdEuBkEe3BK1Cr4LtcwHsnP4ouRFtDbNlzMCHYsm8BU4J9WATHEA3BZrCOY1zJrvCySFRiBUvEhT3cswL4RAWq4BpOVAtAGClHyz2/K2wJqvF1RSTrG1NuPXuaLwf0oabgGfC4EkSxQmfZiFLvYQknGFNvCffkgCj1LgehJvGEhtpXlnToxTvyCuXraMscAfoF755BbBHSGI2MiDzhbRLhMG7QZD5EhCHQHEdLWCeSGJAa4aZ6WCJnYt9pTN9zRatYoUBhDnVZkQtC52OZRHH0pIpmKRERLqyj9fYqkfzWAhKjNytcX61ZVSJsgxU7FRod0397iPAbIySJ4gStUftC/RsgSRSXFlqTdybXZqdIEsV5XWu6nnBVsSyicN+0Job1r806SBKvAntas6Z90S6SxM4MpDNLy9BmF74q1mbvjPrtjEHsjIsinEbiqyoZfKfRuBuPFUwTn+bDD1adOep2JvjQmXBQZwJ03QmZiiD24LOD2CauFcCVFaKrauCiR1hhxIseePWm6UEX0dVbZy5DwbX3Z19PdyZhAL7hKVAF1wBSOHCTqjqTVAPTnDQ85qJLcwKRALQT9B0IE8+0pgKCHYmeCgiFB8S7xA8oPxrYf1QJ/n/QpstCjUj72gYmMBcE8juTUi4l+RNG6mCSP42mhwnSU7pnF+B1ElXKN3w3pOUhDFmoAz5NIgpDwKdJdDtReixGcjCRHosRXisBFUz/fK/Aly+gfVAZantQKS+uANnDlh5Q74jvK6UqCZSPjsk9U7Jn4H29z8C/fKm9AG0BhLof5stPnHs2SakEfD2iolK8AsWepJJMj0CzK1uVy4lsGi8Dy0w5ESnweGb5qQVeKpUfSl+4kVef7GRpJosHNSjrd1NUUOs4ytVVKUvlHN/aKf6xUsJNd1mqqp4pCd7oQm6+UFiphW9K+wXjTyzdVvUpLqxOzxfTO7WlmF75Sbc3Xek5++SZ8obJvkXlDUtyVcHJ6SG9Oy9usr0pKFiy077NIeFS0aVS90T1JUAjdQnQpla1Mafa8tH2Ms7+irLOzkVZ42V9UdbC8DC+cMrkvl9UEJV03WwYa62pkvewFHVJn2b1mvUhxlJYheeG0Z6K2L9Y+Tvl1hdtG8aFbhTAv+Dmo9oS2TLOvvW/V0jih9tlFSctH8Uv59921Kwybxjn5murv8Qsyc4/Upl65WJzvGkQjQ5Zoik8wjAMwzAMwzAMwzAMwzAMwzAMwzDMu/wD6dZBBKO9OS4AAAAASUVORK5CYII=');
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 8px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpt7ZYuI3TaWf-6SPNlosRZADfQ5rzrTtzuQ&s') ;
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="studentform">
+            <table>
+                <tr>
+                    <td class="label">Name  </td>
+                    <td><input type="text" id ="name" placeholder="Enter your Name" class="input-field"></td>
+                </tr>
+                <tr>
+                    <td class="label">Age </td>
+                    <td><input type="text" placeholder="Enter your Age" class="input-field" id="age"></td>
+                </tr>
+                <tr>
+                    <td class="label">Gender </td>
+                    <td>
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Course </td>
+                    <td>
+                        <select class="input-field" id="course">
+                            <option>Html</option>
+                            <option>CSS</option>
+                            <option>Javascript</option>
+                            <option>Java</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Email </td>
+                    <td><input type="text" placeholder="Enter your Email" class="input-field" id="email"></td>
+                </tr>
+            </table>
+            <button input type="submit" class="save">Save</button>
+        </form><br><br>
+        <form>
+            <h2>Saved Student Details</h2>
+            <table id="detailsTable" >
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Course</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tr></tr>
+                <tbody>
+                    <!-- New entries will be added here -->
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
